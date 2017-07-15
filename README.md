@@ -1,2 +1,2 @@
 # robotic-arm
-A software to control a 6DoF robotic arm that uses tinkerforge.de electronic hardware
+A software to control a robotic arm (6DoF) that uses tinkerforge.de electronic hardware
