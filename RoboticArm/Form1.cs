@@ -37,7 +37,7 @@ namespace RoboticArm
 
             // servo0 = HIP-Joint
             servo.SetDegree(0, -9000, 9000);
-            servo.SetPulseWidth(0, 1000, 2000);
+            servo.SetPulseWidth(0, 800, 2700);
             servo.SetPeriod(0, 19500);
             servo.SetAcceleration(0, 65535); // Full Accel
             servo.SetVelocity(0, 65535); // Full speed
@@ -45,7 +45,7 @@ namespace RoboticArm
 
             // servo1 = Join2 (Shoulder)
             servo.SetDegree(1, -9000, 9000);
-            servo.SetPulseWidth(1, 1000, 2000);
+            servo.SetPulseWidth(1, 800, 2700);
             servo.SetPeriod(1, 19500);
             servo.SetAcceleration(1, 65535); // Full Accel
             servo.SetVelocity(1, 65535); // Full speed
@@ -53,7 +53,7 @@ namespace RoboticArm
 
             // servo2 = Join3 (Elbow)
             servo.SetDegree(2, -9000, 9000);
-            servo.SetPulseWidth(2, 1000, 2000);
+            servo.SetPulseWidth(2, 800, 2100);
             servo.SetPeriod(2, 19500);
             servo.SetAcceleration(2, 65535); // Full Accel
             servo.SetVelocity(2, 65535); // Full speed
