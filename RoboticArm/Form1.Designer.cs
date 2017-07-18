@@ -31,6 +31,9 @@
             this.joint1Slider = new System.Windows.Forms.TrackBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.joint3Position = new System.Windows.Forms.TextBox();
+            this.joint2Position = new System.Windows.Forms.TextBox();
+            this.joint1Position = new System.Windows.Forms.TextBox();
             this.joint2Slider = new System.Windows.Forms.TrackBar();
             this.joint2Label = new System.Windows.Forms.Label();
             this.joint3Slider = new System.Windows.Forms.TrackBar();
@@ -38,9 +41,6 @@
             this.joint1Label = new System.Windows.Forms.Label();
             this.logBox = new System.Windows.Forms.RichTextBox();
             this.clearButton = new System.Windows.Forms.Button();
-            this.joint1Position = new System.Windows.Forms.TextBox();
-            this.joint2Position = new System.Windows.Forms.TextBox();
-            this.joint3Position = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -51,8 +51,8 @@
             // joint1Slider
             // 
             this.joint1Slider.Location = new System.Drawing.Point(247, 19);
-            this.joint1Slider.Maximum = 90;
-            this.joint1Slider.Minimum = -90;
+            this.joint1Slider.Maximum = 67;
+            this.joint1Slider.Minimum = -67;
             this.joint1Slider.Name = "joint1Slider";
             this.joint1Slider.Size = new System.Drawing.Size(326, 45);
             this.joint1Slider.TabIndex = 1;
@@ -86,11 +86,32 @@
             this.tabPage2.Text = "Manual Mode";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // joint3Position
+            // 
+            this.joint3Position.Location = new System.Drawing.Point(579, 134);
+            this.joint3Position.Name = "joint3Position";
+            this.joint3Position.Size = new System.Drawing.Size(41, 20);
+            this.joint3Position.TabIndex = 9;
+            // 
+            // joint2Position
+            // 
+            this.joint2Position.Location = new System.Drawing.Point(579, 80);
+            this.joint2Position.Name = "joint2Position";
+            this.joint2Position.Size = new System.Drawing.Size(41, 20);
+            this.joint2Position.TabIndex = 8;
+            // 
+            // joint1Position
+            // 
+            this.joint1Position.Location = new System.Drawing.Point(579, 26);
+            this.joint1Position.Name = "joint1Position";
+            this.joint1Position.Size = new System.Drawing.Size(41, 20);
+            this.joint1Position.TabIndex = 7;
+            // 
             // joint2Slider
             // 
             this.joint2Slider.Location = new System.Drawing.Point(247, 73);
-            this.joint2Slider.Maximum = 90;
-            this.joint2Slider.Minimum = -90;
+            this.joint2Slider.Maximum = 67;
+            this.joint2Slider.Minimum = -67;
             this.joint2Slider.Name = "joint2Slider";
             this.joint2Slider.Size = new System.Drawing.Size(326, 45);
             this.joint2Slider.TabIndex = 4;
@@ -109,8 +130,8 @@
             // joint3Slider
             // 
             this.joint3Slider.Location = new System.Drawing.Point(247, 127);
-            this.joint3Slider.Maximum = 90;
-            this.joint3Slider.Minimum = -90;
+            this.joint3Slider.Maximum = 67;
+            this.joint3Slider.Minimum = -67;
             this.joint3Slider.Name = "joint3Slider";
             this.joint3Slider.Size = new System.Drawing.Size(326, 45);
             this.joint3Slider.TabIndex = 6;
@@ -154,27 +175,6 @@
             this.clearButton.Text = "C L E A R";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
-            // 
-            // joint1Position
-            // 
-            this.joint1Position.Location = new System.Drawing.Point(579, 26);
-            this.joint1Position.Name = "joint1Position";
-            this.joint1Position.Size = new System.Drawing.Size(41, 20);
-            this.joint1Position.TabIndex = 7;
-            // 
-            // joint2Position
-            // 
-            this.joint2Position.Location = new System.Drawing.Point(579, 80);
-            this.joint2Position.Name = "joint2Position";
-            this.joint2Position.Size = new System.Drawing.Size(41, 20);
-            this.joint2Position.TabIndex = 8;
-            // 
-            // joint3Position
-            // 
-            this.joint3Position.Location = new System.Drawing.Point(579, 134);
-            this.joint3Position.Name = "joint3Position";
-            this.joint3Position.Size = new System.Drawing.Size(41, 20);
-            this.joint3Position.TabIndex = 9;
             // 
             // Form1
             // 
