@@ -41,6 +41,14 @@ namespace RoboticArm
             servo.SetPeriod(0, 19500);
             servo.SetAcceleration(0, 65535); // Full Accel
             servo.SetVelocity(0, 65535); // Full speed
+
+
+            // servo1 = Join1 (Shoulder)
+            servo.SetDegree(1, -9000, 9000);
+            servo.SetPulseWidth(1, 1000, 2000);
+            servo.SetPeriod(1, 19500);
+            servo.SetAcceleration(1, 65535); // Full Accel
+            servo.SetVelocity(1, 65535); // Full speed
         }
 
    
@@ -61,6 +69,11 @@ namespace RoboticArm
         {
             logBox.AppendText(message + Environment.NewLine);
         }
-            
+
+        private void joint1Slider_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetPosition(1, (short)(joint1Slider.Value * 100));
+            servo.Enable(1);
+        }
     }
 }

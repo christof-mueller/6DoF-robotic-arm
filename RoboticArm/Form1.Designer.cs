@@ -31,12 +31,15 @@
             this.baseSlider = new System.Windows.Forms.TrackBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.baseLabel = new System.Windows.Forms.Label();
             this.logBox = new System.Windows.Forms.RichTextBox();
             this.clearButton = new System.Windows.Forms.Button();
-            this.baseLabel = new System.Windows.Forms.Label();
+            this.joint1Label = new System.Windows.Forms.Label();
+            this.joint1Slider = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.baseSlider)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).BeginInit();
             this.SuspendLayout();
             // 
             // baseSlider
@@ -60,6 +63,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.joint1Slider);
+            this.tabPage2.Controls.Add(this.joint1Label);
             this.tabPage2.Controls.Add(this.baseLabel);
             this.tabPage2.Controls.Add(this.baseSlider);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -69,6 +74,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manual Mode";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // baseLabel
+            // 
+            this.baseLabel.AutoSize = true;
+            this.baseLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.baseLabel.Location = new System.Drawing.Point(15, 19);
+            this.baseLabel.Name = "baseLabel";
+            this.baseLabel.Size = new System.Drawing.Size(68, 25);
+            this.baseLabel.TabIndex = 2;
+            this.baseLabel.Text = "Base";
             // 
             // logBox
             // 
@@ -89,15 +104,25 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // baseLabel
+            // joint1Label
             // 
-            this.baseLabel.AutoSize = true;
-            this.baseLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseLabel.Location = new System.Drawing.Point(15, 19);
-            this.baseLabel.Name = "baseLabel";
-            this.baseLabel.Size = new System.Drawing.Size(68, 25);
-            this.baseLabel.TabIndex = 2;
-            this.baseLabel.Text = "Base";
+            this.joint1Label.AutoSize = true;
+            this.joint1Label.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint1Label.Location = new System.Drawing.Point(15, 73);
+            this.joint1Label.Name = "joint1Label";
+            this.joint1Label.Size = new System.Drawing.Size(85, 25);
+            this.joint1Label.TabIndex = 3;
+            this.joint1Label.Text = "Joint1";
+            // 
+            // joint1Slider
+            // 
+            this.joint1Slider.Location = new System.Drawing.Point(104, 73);
+            this.joint1Slider.Maximum = 90;
+            this.joint1Slider.Minimum = -90;
+            this.joint1Slider.Name = "joint1Slider";
+            this.joint1Slider.Size = new System.Drawing.Size(506, 45);
+            this.joint1Slider.TabIndex = 4;
+            this.joint1Slider.ValueChanged += new System.EventHandler(this.joint1Slider_ValueChanged);
             // 
             // Form1
             // 
@@ -113,6 +138,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,6 +150,8 @@
         private System.Windows.Forms.RichTextBox logBox;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label baseLabel;
+        private System.Windows.Forms.TrackBar joint1Slider;
+        private System.Windows.Forms.Label joint1Label;
     }
 }
 
