@@ -41,23 +41,31 @@ namespace RoboticArm
             servo.SetPeriod(0, 19500);
             servo.SetAcceleration(0, 65535); // Full Accel
             servo.SetVelocity(0, 65535); // Full speed
+            servo.Enable(0);
 
-
-            // servo1 = Join1 (Shoulder)
+            // servo1 = Join2 (Shoulder)
             servo.SetDegree(1, -9000, 9000);
             servo.SetPulseWidth(1, 1000, 2000);
             servo.SetPeriod(1, 19500);
             servo.SetAcceleration(1, 65535); // Full Accel
             servo.SetVelocity(1, 65535); // Full speed
+            servo.Enable(1);
+
+            // servo2 = Join3 (Elbow)
+            servo.SetDegree(2, -9000, 9000);
+            servo.SetPulseWidth(2, 1000, 2000);
+            servo.SetPeriod(2, 19500);
+            servo.SetAcceleration(2, 65535); // Full Accel
+            servo.SetVelocity(2, 65535); // Full speed
+            servo.Enable(2);
         }
 
    
 
-        private void baseSlider_ValueChanged(object sender, EventArgs e)
+        private void joint1Slider_ValueChanged(object sender, EventArgs e)
         {
-            servo.SetPosition(0, (short)(baseSlider.Value * 100)); // Set to most right position
-            servo.Enable(0);
-
+            servo.SetPosition(0, (short)(joint1Slider.Value * 100));
+            joint1Position.Text = servo.GetPosition(0).ToString();
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -70,10 +78,16 @@ namespace RoboticArm
             logBox.AppendText(message + Environment.NewLine);
         }
 
-        private void joint1Slider_ValueChanged(object sender, EventArgs e)
+        private void joint2Slider_ValueChanged(object sender, EventArgs e)
         {
-            servo.SetPosition(1, (short)(joint1Slider.Value * 100));
-            servo.Enable(1);
+            servo.SetPosition(1, (short)(joint2Slider.Value * 100));
+            joint2Position.Text = servo.GetPosition(1).ToString();
+        }
+
+        private void joint3Slider_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetPosition(2, (short)(joint3Slider.Value * 100));
+            joint3Position.Text = servo.GetPosition(2).ToString();
         }
     }
 }
