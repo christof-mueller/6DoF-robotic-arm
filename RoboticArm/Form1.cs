@@ -58,14 +58,30 @@ namespace RoboticArm
             servo.SetAcceleration(2, 65535); // Full Accel
             servo.SetVelocity(2, 65535); // Full speed
             servo.Enable(2);
-        }
 
-   
+            // servo3 = Join4 (Wrist)
+            servo.SetDegree(3, -6700, 6700);
+            servo.SetPulseWidth(3, 800, 2100);
+            servo.SetPeriod(3, 19500);
+            servo.SetAcceleration(3, 65535); // Full Accel
+            servo.SetVelocity(3, 65535); // Full speed
+            servo.Enable(3);
 
-        private void joint1Slider_ValueChanged(object sender, EventArgs e)
-        {
-            servo.SetPosition(0, (short)(joint1Slider.Value * 100));
-            joint1Position.Text = (servo.GetPosition(0) / 100).ToString();
+            // servo4 = Join5 (Wrist)
+            servo.SetDegree(4, -6700, 6700);
+            servo.SetPulseWidth(4, 800, 2100);
+            servo.SetPeriod(4, 19500);
+            servo.SetAcceleration(4, 65535); // Full Accel
+            servo.SetVelocity(4, 65535); // Full speed
+            servo.Enable(4);
+
+            // servo5 = Join6 (Wrist)
+            servo.SetDegree(5, -6700, 6700);
+            servo.SetPulseWidth(5, 800, 2100);
+            servo.SetPeriod(5, 19500);
+            servo.SetAcceleration(5, 65535); // Full Accel
+            servo.SetVelocity(5, 65535); // Full speed
+            servo.Enable(5);
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -78,6 +94,14 @@ namespace RoboticArm
             logBox.AppendText(message + Environment.NewLine);
         }
 
+
+
+        private void joint1Slider_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetPosition(0, (short)(joint1Slider.Value * 100));
+            joint1Position.Text = (servo.GetPosition(0) / 100).ToString();
+        }
+
         private void joint2Slider_ValueChanged(object sender, EventArgs e)
         {
             servo.SetPosition(1, (short)(joint2Slider.Value * 100));
@@ -88,6 +112,24 @@ namespace RoboticArm
         {
             servo.SetPosition(2, (short)(joint3Slider.Value * 100));
             joint3Position.Text = (servo.GetPosition(2) / 100).ToString();
+        }
+
+        private void joint4Slider_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetPosition(3, (short)(joint4Slider.Value * 100));
+            joint4Position.Text = (servo.GetPosition(3) / 100).ToString();
+        }
+
+        private void joint5Slider_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetPosition(4, (short)(joint5Slider.Value * 100));
+            joint5Position.Text = (servo.GetPosition(4) / 100).ToString();
+        }
+
+        private void joint6Slider_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetPosition(5, (short)(joint6Slider.Value * 100));
+            joint6Position.Text = (servo.GetPosition(5) / 100).ToString();
         }
     }
 }

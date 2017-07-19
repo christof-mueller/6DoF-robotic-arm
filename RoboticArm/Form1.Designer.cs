@@ -31,6 +31,15 @@
             this.joint1Slider = new System.Windows.Forms.TrackBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.joint6Position = new System.Windows.Forms.TextBox();
+            this.joint6Slider = new System.Windows.Forms.TrackBar();
+            this.joint6Label = new System.Windows.Forms.Label();
+            this.joint5Position = new System.Windows.Forms.TextBox();
+            this.joint5Slider = new System.Windows.Forms.TrackBar();
+            this.joint5Label = new System.Windows.Forms.Label();
+            this.joint4Position = new System.Windows.Forms.TextBox();
+            this.joint4Slider = new System.Windows.Forms.TrackBar();
+            this.joint4Label = new System.Windows.Forms.Label();
             this.joint3Position = new System.Windows.Forms.TextBox();
             this.joint2Position = new System.Windows.Forms.TextBox();
             this.joint1Position = new System.Windows.Forms.TextBox();
@@ -44,6 +53,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.joint6Slider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.joint5Slider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.joint4Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint2Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint3Slider)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +81,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.joint6Position);
+            this.tabPage2.Controls.Add(this.joint6Slider);
+            this.tabPage2.Controls.Add(this.joint6Label);
+            this.tabPage2.Controls.Add(this.joint5Position);
+            this.tabPage2.Controls.Add(this.joint5Slider);
+            this.tabPage2.Controls.Add(this.joint5Label);
+            this.tabPage2.Controls.Add(this.joint4Position);
+            this.tabPage2.Controls.Add(this.joint4Slider);
+            this.tabPage2.Controls.Add(this.joint4Label);
             this.tabPage2.Controls.Add(this.joint3Position);
             this.tabPage2.Controls.Add(this.joint2Position);
             this.tabPage2.Controls.Add(this.joint1Position);
@@ -85,6 +106,87 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manual Mode";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // joint6Position
+            // 
+            this.joint6Position.Location = new System.Drawing.Point(579, 308);
+            this.joint6Position.Name = "joint6Position";
+            this.joint6Position.Size = new System.Drawing.Size(41, 20);
+            this.joint6Position.TabIndex = 18;
+            // 
+            // joint6Slider
+            // 
+            this.joint6Slider.Location = new System.Drawing.Point(247, 301);
+            this.joint6Slider.Maximum = 67;
+            this.joint6Slider.Minimum = -67;
+            this.joint6Slider.Name = "joint6Slider";
+            this.joint6Slider.Size = new System.Drawing.Size(326, 45);
+            this.joint6Slider.TabIndex = 17;
+            this.joint6Slider.ValueChanged += new System.EventHandler(this.joint6Slider_ValueChanged);
+            // 
+            // joint6Label
+            // 
+            this.joint6Label.AutoSize = true;
+            this.joint6Label.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint6Label.Location = new System.Drawing.Point(15, 301);
+            this.joint6Label.Name = "joint6Label";
+            this.joint6Label.Size = new System.Drawing.Size(109, 25);
+            this.joint6Label.TabIndex = 16;
+            this.joint6Label.Text = "WJoint6";
+            // 
+            // joint5Position
+            // 
+            this.joint5Position.Location = new System.Drawing.Point(579, 257);
+            this.joint5Position.Name = "joint5Position";
+            this.joint5Position.Size = new System.Drawing.Size(41, 20);
+            this.joint5Position.TabIndex = 15;
+            // 
+            // joint5Slider
+            // 
+            this.joint5Slider.Location = new System.Drawing.Point(247, 250);
+            this.joint5Slider.Maximum = 67;
+            this.joint5Slider.Minimum = -67;
+            this.joint5Slider.Name = "joint5Slider";
+            this.joint5Slider.Size = new System.Drawing.Size(326, 45);
+            this.joint5Slider.TabIndex = 14;
+            this.joint5Slider.ValueChanged += new System.EventHandler(this.joint5Slider_ValueChanged);
+            // 
+            // joint5Label
+            // 
+            this.joint5Label.AutoSize = true;
+            this.joint5Label.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint5Label.Location = new System.Drawing.Point(15, 250);
+            this.joint5Label.Name = "joint5Label";
+            this.joint5Label.Size = new System.Drawing.Size(109, 25);
+            this.joint5Label.TabIndex = 13;
+            this.joint5Label.Text = "WJoint5";
+            // 
+            // joint4Position
+            // 
+            this.joint4Position.Location = new System.Drawing.Point(579, 203);
+            this.joint4Position.Name = "joint4Position";
+            this.joint4Position.Size = new System.Drawing.Size(41, 20);
+            this.joint4Position.TabIndex = 12;
+            // 
+            // joint4Slider
+            // 
+            this.joint4Slider.Location = new System.Drawing.Point(247, 196);
+            this.joint4Slider.Maximum = 67;
+            this.joint4Slider.Minimum = -67;
+            this.joint4Slider.Name = "joint4Slider";
+            this.joint4Slider.Size = new System.Drawing.Size(326, 45);
+            this.joint4Slider.TabIndex = 11;
+            this.joint4Slider.ValueChanged += new System.EventHandler(this.joint4Slider_ValueChanged);
+            // 
+            // joint4Label
+            // 
+            this.joint4Label.AutoSize = true;
+            this.joint4Label.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint4Label.Location = new System.Drawing.Point(15, 196);
+            this.joint4Label.Name = "joint4Label";
+            this.joint4Label.Size = new System.Drawing.Size(109, 25);
+            this.joint4Label.TabIndex = 10;
+            this.joint4Label.Text = "WJoint4";
             // 
             // joint3Position
             // 
@@ -190,6 +292,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.joint6Slider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.joint5Slider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.joint4Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint2Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint3Slider)).EndInit();
             this.ResumeLayout(false);
@@ -210,6 +315,15 @@
         private System.Windows.Forms.TextBox joint3Position;
         private System.Windows.Forms.TextBox joint2Position;
         private System.Windows.Forms.TextBox joint1Position;
+        private System.Windows.Forms.TextBox joint6Position;
+        private System.Windows.Forms.TrackBar joint6Slider;
+        private System.Windows.Forms.Label joint6Label;
+        private System.Windows.Forms.TextBox joint5Position;
+        private System.Windows.Forms.TrackBar joint5Slider;
+        private System.Windows.Forms.Label joint5Label;
+        private System.Windows.Forms.TextBox joint4Position;
+        private System.Windows.Forms.TrackBar joint4Slider;
+        private System.Windows.Forms.Label joint4Label;
     }
 }
 
