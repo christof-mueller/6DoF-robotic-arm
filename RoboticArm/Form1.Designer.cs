@@ -30,7 +30,7 @@
         {
             this.joint1Slider = new System.Windows.Forms.TrackBar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.manualPage = new System.Windows.Forms.TabPage();
             this.joint6Position = new System.Windows.Forms.TextBox();
             this.joint6Slider = new System.Windows.Forms.TrackBar();
             this.joint6Label = new System.Windows.Forms.Label();
@@ -50,14 +50,17 @@
             this.joint1Label = new System.Windows.Forms.Label();
             this.logBox = new System.Windows.Forms.RichTextBox();
             this.clearButton = new System.Windows.Forms.Button();
+            this.automaticPage = new System.Windows.Forms.TabPage();
+            this.homeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.manualPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.joint6Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint5Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint4Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint2Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint3Slider)).BeginInit();
+            this.automaticPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // joint1Slider
@@ -72,40 +75,41 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.manualPage);
+            this.tabControl1.Controls.Add(this.automaticPage);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(641, 379);
             this.tabControl1.TabIndex = 2;
             // 
-            // tabPage2
+            // manualPage
             // 
-            this.tabPage2.Controls.Add(this.joint6Position);
-            this.tabPage2.Controls.Add(this.joint6Slider);
-            this.tabPage2.Controls.Add(this.joint6Label);
-            this.tabPage2.Controls.Add(this.joint5Position);
-            this.tabPage2.Controls.Add(this.joint5Slider);
-            this.tabPage2.Controls.Add(this.joint5Label);
-            this.tabPage2.Controls.Add(this.joint4Position);
-            this.tabPage2.Controls.Add(this.joint4Slider);
-            this.tabPage2.Controls.Add(this.joint4Label);
-            this.tabPage2.Controls.Add(this.joint3Position);
-            this.tabPage2.Controls.Add(this.joint2Position);
-            this.tabPage2.Controls.Add(this.joint1Position);
-            this.tabPage2.Controls.Add(this.joint2Slider);
-            this.tabPage2.Controls.Add(this.joint2Label);
-            this.tabPage2.Controls.Add(this.joint3Slider);
-            this.tabPage2.Controls.Add(this.joint3Label);
-            this.tabPage2.Controls.Add(this.joint1Label);
-            this.tabPage2.Controls.Add(this.joint1Slider);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(633, 353);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Manual Mode";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.manualPage.Controls.Add(this.joint6Position);
+            this.manualPage.Controls.Add(this.joint6Slider);
+            this.manualPage.Controls.Add(this.joint6Label);
+            this.manualPage.Controls.Add(this.joint5Position);
+            this.manualPage.Controls.Add(this.joint5Slider);
+            this.manualPage.Controls.Add(this.joint5Label);
+            this.manualPage.Controls.Add(this.joint4Position);
+            this.manualPage.Controls.Add(this.joint4Slider);
+            this.manualPage.Controls.Add(this.joint4Label);
+            this.manualPage.Controls.Add(this.joint3Position);
+            this.manualPage.Controls.Add(this.joint2Position);
+            this.manualPage.Controls.Add(this.joint1Position);
+            this.manualPage.Controls.Add(this.joint2Slider);
+            this.manualPage.Controls.Add(this.joint2Label);
+            this.manualPage.Controls.Add(this.joint3Slider);
+            this.manualPage.Controls.Add(this.joint3Label);
+            this.manualPage.Controls.Add(this.joint1Label);
+            this.manualPage.Controls.Add(this.joint1Slider);
+            this.manualPage.Location = new System.Drawing.Point(4, 22);
+            this.manualPage.Name = "manualPage";
+            this.manualPage.Padding = new System.Windows.Forms.Padding(3);
+            this.manualPage.Size = new System.Drawing.Size(633, 353);
+            this.manualPage.TabIndex = 1;
+            this.manualPage.Text = "Manual Mode";
+            this.manualPage.UseVisualStyleBackColor = true;
             // 
             // joint6Position
             // 
@@ -278,6 +282,26 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // automaticPage
+            // 
+            this.automaticPage.Controls.Add(this.homeButton);
+            this.automaticPage.Location = new System.Drawing.Point(4, 22);
+            this.automaticPage.Name = "automaticPage";
+            this.automaticPage.Size = new System.Drawing.Size(633, 353);
+            this.automaticPage.TabIndex = 2;
+            this.automaticPage.Text = "Automatic Mode";
+            this.automaticPage.UseVisualStyleBackColor = true;
+            // 
+            // homeButton
+            // 
+            this.homeButton.Location = new System.Drawing.Point(13, 14);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(98, 23);
+            this.homeButton.TabIndex = 0;
+            this.homeButton.Text = "Home";
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,13 +314,14 @@
             this.Text = "RobiticArm";
             ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.manualPage.ResumeLayout(false);
+            this.manualPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.joint6Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint5Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint4Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint2Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint3Slider)).EndInit();
+            this.automaticPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -304,7 +329,7 @@
         #endregion
         private System.Windows.Forms.TrackBar joint1Slider;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage manualPage;
         private System.Windows.Forms.RichTextBox logBox;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label joint1Label;
@@ -324,6 +349,8 @@
         private System.Windows.Forms.TextBox joint4Position;
         private System.Windows.Forms.TrackBar joint4Slider;
         private System.Windows.Forms.Label joint4Label;
+        private System.Windows.Forms.TabPage automaticPage;
+        private System.Windows.Forms.Button homeButton;
     }
 }
 

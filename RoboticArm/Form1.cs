@@ -131,5 +131,14 @@ namespace RoboticArm
             servo.SetPosition(5, (short)(joint6Slider.Value * 100));
             joint6Position.Text = (servo.GetPosition(5) / 100).ToString();
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            for(int i=0; i<6; i++)
+            {
+                servo.SetPosition((byte)i, 0);
+            }
+            
+        }
     }
 }
