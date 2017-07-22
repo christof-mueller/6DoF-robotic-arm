@@ -71,7 +71,7 @@
             this.joint1Slider.Name = "joint1Slider";
             this.joint1Slider.Size = new System.Drawing.Size(326, 45);
             this.joint1Slider.TabIndex = 1;
-            this.joint1Slider.ValueChanged += new System.EventHandler(this.joint1Slider_ValueChanged);
+            this.joint1Slider.ValueChanged += new System.EventHandler(this.Joint1Slider_ValueChanged);
             // 
             // tabControl1
             // 
@@ -126,7 +126,7 @@
             this.joint6Slider.Name = "joint6Slider";
             this.joint6Slider.Size = new System.Drawing.Size(326, 45);
             this.joint6Slider.TabIndex = 17;
-            this.joint6Slider.ValueChanged += new System.EventHandler(this.joint6Slider_ValueChanged);
+            this.joint6Slider.ValueChanged += new System.EventHandler(this.Joint6Slider_ValueChanged);
             // 
             // joint6Label
             // 
@@ -153,7 +153,7 @@
             this.joint5Slider.Name = "joint5Slider";
             this.joint5Slider.Size = new System.Drawing.Size(326, 45);
             this.joint5Slider.TabIndex = 14;
-            this.joint5Slider.ValueChanged += new System.EventHandler(this.joint5Slider_ValueChanged);
+            this.joint5Slider.ValueChanged += new System.EventHandler(this.Joint5Slider_ValueChanged);
             // 
             // joint5Label
             // 
@@ -180,7 +180,7 @@
             this.joint4Slider.Name = "joint4Slider";
             this.joint4Slider.Size = new System.Drawing.Size(326, 45);
             this.joint4Slider.TabIndex = 11;
-            this.joint4Slider.ValueChanged += new System.EventHandler(this.joint4Slider_ValueChanged);
+            this.joint4Slider.ValueChanged += new System.EventHandler(this.Joint4Slider_ValueChanged);
             // 
             // joint4Label
             // 
@@ -221,7 +221,7 @@
             this.joint2Slider.Name = "joint2Slider";
             this.joint2Slider.Size = new System.Drawing.Size(326, 45);
             this.joint2Slider.TabIndex = 4;
-            this.joint2Slider.ValueChanged += new System.EventHandler(this.joint2Slider_ValueChanged);
+            this.joint2Slider.ValueChanged += new System.EventHandler(this.Joint2Slider_ValueChanged);
             // 
             // joint2Label
             // 
@@ -241,7 +241,7 @@
             this.joint3Slider.Name = "joint3Slider";
             this.joint3Slider.Size = new System.Drawing.Size(326, 45);
             this.joint3Slider.TabIndex = 6;
-            this.joint3Slider.ValueChanged += new System.EventHandler(this.joint3Slider_ValueChanged);
+            this.joint3Slider.ValueChanged += new System.EventHandler(this.Joint3Slider_ValueChanged);
             // 
             // joint3Label
             // 
@@ -280,7 +280,7 @@
             this.clearButton.TabIndex = 4;
             this.clearButton.Text = "C L E A R";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // automaticPage
             // 
@@ -300,7 +300,7 @@
             this.homeButton.TabIndex = 0;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = true;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            this.homeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // Form1
             // 
