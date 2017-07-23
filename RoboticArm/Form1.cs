@@ -102,6 +102,11 @@ namespace RoboticArm
         {
             for (byte i=0; i<SERVO_COUNT; i++)
             {
+                // Decoupling homeing request with 500ms sleep between each.
+                if (i > 0) // don't wait before first axis homeing
+                {
+                    System.Threading.Thread.Sleep(500);
+                }
                 servo.SetPosition(i, 0);
             }
         }
