@@ -48,10 +48,23 @@
             this.joint3Slider = new System.Windows.Forms.TrackBar();
             this.joint3Label = new System.Windows.Forms.Label();
             this.joint1Label = new System.Windows.Forms.Label();
-            this.logBox = new System.Windows.Forms.RichTextBox();
-            this.clearButton = new System.Windows.Forms.Button();
             this.automaticPage = new System.Windows.Forms.TabPage();
             this.homeButton = new System.Windows.Forms.Button();
+            this.logBox = new System.Windows.Forms.RichTextBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.settingsPage = new System.Windows.Forms.TabPage();
+            this.joint1ServoSpeedLabel = new System.Windows.Forms.Label();
+            this.Joint1ServoSpeed = new System.Windows.Forms.NumericUpDown();
+            this.Joint2ServoSpeed = new System.Windows.Forms.NumericUpDown();
+            this.joint2ServoSpeedLabel = new System.Windows.Forms.Label();
+            this.Joint3ServoSpeed = new System.Windows.Forms.NumericUpDown();
+            this.joint3ServoSpeedLabel = new System.Windows.Forms.Label();
+            this.Joint6ServoSpeed = new System.Windows.Forms.NumericUpDown();
+            this.joint6ServoSpeedLabel = new System.Windows.Forms.Label();
+            this.Joint5ServoSpeed = new System.Windows.Forms.NumericUpDown();
+            this.joint5ServoSpeedLabel = new System.Windows.Forms.Label();
+            this.Joint4ServoSpeed = new System.Windows.Forms.NumericUpDown();
+            this.joint4ServoSpeedLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.joint1Slider)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.manualPage.SuspendLayout();
@@ -61,6 +74,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.joint2Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint3Slider)).BeginInit();
             this.automaticPage.SuspendLayout();
+            this.settingsPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint1ServoSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint2ServoSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint3ServoSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint6ServoSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint5ServoSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint4ServoSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // joint1Slider
@@ -77,6 +97,7 @@
             // 
             this.tabControl1.Controls.Add(this.manualPage);
             this.tabControl1.Controls.Add(this.automaticPage);
+            this.tabControl1.Controls.Add(this.settingsPage);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -263,25 +284,6 @@
             this.joint1Label.TabIndex = 2;
             this.joint1Label.Text = "Joint 1 (Base)";
             // 
-            // logBox
-            // 
-            this.logBox.Location = new System.Drawing.Point(12, 397);
-            this.logBox.Name = "logBox";
-            this.logBox.Size = new System.Drawing.Size(614, 96);
-            this.logBox.TabIndex = 3;
-            this.logBox.Text = "";
-            // 
-            // clearButton
-            // 
-            this.clearButton.Location = new System.Drawing.Point(624, 397);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.clearButton.Size = new System.Drawing.Size(25, 95);
-            this.clearButton.TabIndex = 4;
-            this.clearButton.Text = "C L E A R";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            // 
             // automaticPage
             // 
             this.automaticPage.Controls.Add(this.homeButton);
@@ -301,6 +303,209 @@
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // logBox
+            // 
+            this.logBox.Location = new System.Drawing.Point(12, 397);
+            this.logBox.Name = "logBox";
+            this.logBox.Size = new System.Drawing.Size(614, 96);
+            this.logBox.TabIndex = 3;
+            this.logBox.Text = "";
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(624, 397);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.clearButton.Size = new System.Drawing.Size(25, 95);
+            this.clearButton.TabIndex = 4;
+            this.clearButton.Text = "C L E A R";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // settingsPage
+            // 
+            this.settingsPage.Controls.Add(this.Joint6ServoSpeed);
+            this.settingsPage.Controls.Add(this.joint6ServoSpeedLabel);
+            this.settingsPage.Controls.Add(this.Joint5ServoSpeed);
+            this.settingsPage.Controls.Add(this.joint5ServoSpeedLabel);
+            this.settingsPage.Controls.Add(this.Joint4ServoSpeed);
+            this.settingsPage.Controls.Add(this.joint4ServoSpeedLabel);
+            this.settingsPage.Controls.Add(this.Joint3ServoSpeed);
+            this.settingsPage.Controls.Add(this.joint3ServoSpeedLabel);
+            this.settingsPage.Controls.Add(this.Joint2ServoSpeed);
+            this.settingsPage.Controls.Add(this.joint2ServoSpeedLabel);
+            this.settingsPage.Controls.Add(this.Joint1ServoSpeed);
+            this.settingsPage.Controls.Add(this.joint1ServoSpeedLabel);
+            this.settingsPage.Location = new System.Drawing.Point(4, 22);
+            this.settingsPage.Name = "settingsPage";
+            this.settingsPage.Size = new System.Drawing.Size(633, 353);
+            this.settingsPage.TabIndex = 3;
+            this.settingsPage.Text = "Settings";
+            this.settingsPage.UseVisualStyleBackColor = true;
+            // 
+            // joint1ServoSpeedLabel
+            // 
+            this.joint1ServoSpeedLabel.AutoSize = true;
+            this.joint1ServoSpeedLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint1ServoSpeedLabel.Location = new System.Drawing.Point(12, 14);
+            this.joint1ServoSpeedLabel.Name = "joint1ServoSpeedLabel";
+            this.joint1ServoSpeedLabel.Size = new System.Drawing.Size(246, 25);
+            this.joint1ServoSpeedLabel.TabIndex = 3;
+            this.joint1ServoSpeedLabel.Text = "Joint 1 Servo Speed";
+            // 
+            // Joint1ServoSpeed
+            // 
+            this.Joint1ServoSpeed.Location = new System.Drawing.Point(280, 19);
+            this.Joint1ServoSpeed.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.Joint1ServoSpeed.Name = "Joint1ServoSpeed";
+            this.Joint1ServoSpeed.Size = new System.Drawing.Size(58, 20);
+            this.Joint1ServoSpeed.TabIndex = 4;
+            this.Joint1ServoSpeed.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.Joint1ServoSpeed.ValueChanged += new System.EventHandler(this.Joint1ServoSpeed_ValueChanged);
+            // 
+            // Joint2ServoSpeed
+            // 
+            this.Joint2ServoSpeed.Location = new System.Drawing.Point(280, 54);
+            this.Joint2ServoSpeed.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.Joint2ServoSpeed.Name = "Joint2ServoSpeed";
+            this.Joint2ServoSpeed.Size = new System.Drawing.Size(58, 20);
+            this.Joint2ServoSpeed.TabIndex = 6;
+            this.Joint2ServoSpeed.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // joint2ServoSpeedLabel
+            // 
+            this.joint2ServoSpeedLabel.AutoSize = true;
+            this.joint2ServoSpeedLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint2ServoSpeedLabel.Location = new System.Drawing.Point(12, 49);
+            this.joint2ServoSpeedLabel.Name = "joint2ServoSpeedLabel";
+            this.joint2ServoSpeedLabel.Size = new System.Drawing.Size(246, 25);
+            this.joint2ServoSpeedLabel.TabIndex = 5;
+            this.joint2ServoSpeedLabel.Text = "Joint 2 Servo Speed";
+            // 
+            // Joint3ServoSpeed
+            // 
+            this.Joint3ServoSpeed.Location = new System.Drawing.Point(280, 88);
+            this.Joint3ServoSpeed.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.Joint3ServoSpeed.Name = "Joint3ServoSpeed";
+            this.Joint3ServoSpeed.Size = new System.Drawing.Size(58, 20);
+            this.Joint3ServoSpeed.TabIndex = 8;
+            this.Joint3ServoSpeed.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // joint3ServoSpeedLabel
+            // 
+            this.joint3ServoSpeedLabel.AutoSize = true;
+            this.joint3ServoSpeedLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint3ServoSpeedLabel.Location = new System.Drawing.Point(12, 83);
+            this.joint3ServoSpeedLabel.Name = "joint3ServoSpeedLabel";
+            this.joint3ServoSpeedLabel.Size = new System.Drawing.Size(246, 25);
+            this.joint3ServoSpeedLabel.TabIndex = 7;
+            this.joint3ServoSpeedLabel.Text = "Joint 3 Servo Speed";
+            // 
+            // Joint6ServoSpeed
+            // 
+            this.Joint6ServoSpeed.Location = new System.Drawing.Point(280, 200);
+            this.Joint6ServoSpeed.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.Joint6ServoSpeed.Name = "Joint6ServoSpeed";
+            this.Joint6ServoSpeed.Size = new System.Drawing.Size(58, 20);
+            this.Joint6ServoSpeed.TabIndex = 14;
+            this.Joint6ServoSpeed.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // joint6ServoSpeedLabel
+            // 
+            this.joint6ServoSpeedLabel.AutoSize = true;
+            this.joint6ServoSpeedLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint6ServoSpeedLabel.Location = new System.Drawing.Point(12, 195);
+            this.joint6ServoSpeedLabel.Name = "joint6ServoSpeedLabel";
+            this.joint6ServoSpeedLabel.Size = new System.Drawing.Size(246, 25);
+            this.joint6ServoSpeedLabel.TabIndex = 13;
+            this.joint6ServoSpeedLabel.Text = "Joint 6 Servo Speed";
+            // 
+            // Joint5ServoSpeed
+            // 
+            this.Joint5ServoSpeed.Location = new System.Drawing.Point(280, 166);
+            this.Joint5ServoSpeed.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.Joint5ServoSpeed.Name = "Joint5ServoSpeed";
+            this.Joint5ServoSpeed.Size = new System.Drawing.Size(58, 20);
+            this.Joint5ServoSpeed.TabIndex = 12;
+            this.Joint5ServoSpeed.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // joint5ServoSpeedLabel
+            // 
+            this.joint5ServoSpeedLabel.AutoSize = true;
+            this.joint5ServoSpeedLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint5ServoSpeedLabel.Location = new System.Drawing.Point(12, 161);
+            this.joint5ServoSpeedLabel.Name = "joint5ServoSpeedLabel";
+            this.joint5ServoSpeedLabel.Size = new System.Drawing.Size(246, 25);
+            this.joint5ServoSpeedLabel.TabIndex = 11;
+            this.joint5ServoSpeedLabel.Text = "Joint 5 Servo Speed";
+            // 
+            // Joint4ServoSpeed
+            // 
+            this.Joint4ServoSpeed.Location = new System.Drawing.Point(280, 131);
+            this.Joint4ServoSpeed.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.Joint4ServoSpeed.Name = "Joint4ServoSpeed";
+            this.Joint4ServoSpeed.Size = new System.Drawing.Size(58, 20);
+            this.Joint4ServoSpeed.TabIndex = 10;
+            this.Joint4ServoSpeed.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // joint4ServoSpeedLabel
+            // 
+            this.joint4ServoSpeedLabel.AutoSize = true;
+            this.joint4ServoSpeedLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.joint4ServoSpeedLabel.Location = new System.Drawing.Point(12, 126);
+            this.joint4ServoSpeedLabel.Name = "joint4ServoSpeedLabel";
+            this.joint4ServoSpeedLabel.Size = new System.Drawing.Size(246, 25);
+            this.joint4ServoSpeedLabel.TabIndex = 9;
+            this.joint4ServoSpeedLabel.Text = "Joint 4 Servo Speed";
             // 
             // Form1
             // 
@@ -322,6 +527,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.joint2Slider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joint3Slider)).EndInit();
             this.automaticPage.ResumeLayout(false);
+            this.settingsPage.ResumeLayout(false);
+            this.settingsPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint1ServoSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint2ServoSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint3ServoSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint6ServoSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint5ServoSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Joint4ServoSpeed)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,6 +564,19 @@
         private System.Windows.Forms.Label joint4Label;
         private System.Windows.Forms.TabPage automaticPage;
         private System.Windows.Forms.Button homeButton;
+        private System.Windows.Forms.TabPage settingsPage;
+        private System.Windows.Forms.NumericUpDown Joint1ServoSpeed;
+        private System.Windows.Forms.Label joint1ServoSpeedLabel;
+        private System.Windows.Forms.NumericUpDown Joint6ServoSpeed;
+        private System.Windows.Forms.Label joint6ServoSpeedLabel;
+        private System.Windows.Forms.NumericUpDown Joint5ServoSpeed;
+        private System.Windows.Forms.Label joint5ServoSpeedLabel;
+        private System.Windows.Forms.NumericUpDown Joint4ServoSpeed;
+        private System.Windows.Forms.Label joint4ServoSpeedLabel;
+        private System.Windows.Forms.NumericUpDown Joint3ServoSpeed;
+        private System.Windows.Forms.Label joint3ServoSpeedLabel;
+        private System.Windows.Forms.NumericUpDown Joint2ServoSpeed;
+        private System.Windows.Forms.Label joint2ServoSpeedLabel;
     }
 }
 

@@ -50,6 +50,7 @@ namespace RoboticArm
             servo.SetPeriod(JOINT1_SERVO, 19500);
             servo.SetAcceleration(JOINT1_SERVO, 65535); // Full Accel
             servo.SetVelocity(JOINT1_SERVO, 65535); // Full speed
+            Joint1ServoSpeed.Value = servo.GetVelocity(JOINT1_SERVO);
 
             // servo1 = Join2 (Shoulder)
             servo.SetDegree(JOINT2_SERVO, -6700, 6700);
@@ -57,6 +58,7 @@ namespace RoboticArm
             servo.SetPeriod(JOINT2_SERVO, 19500);
             servo.SetAcceleration(JOINT2_SERVO, 65535); // Full Accel
             servo.SetVelocity(JOINT2_SERVO, 65535); // Full speed
+            Joint2ServoSpeed.Value = servo.GetVelocity(JOINT2_SERVO);
 
             // servo2 = Join3 (Elbow)
             servo.SetDegree(JOINT3_SERVO, -6700, 6700);
@@ -64,6 +66,7 @@ namespace RoboticArm
             servo.SetPeriod(JOINT3_SERVO, 19500);
             servo.SetAcceleration(JOINT3_SERVO, 65535); // Full Accel
             servo.SetVelocity(JOINT3_SERVO, 65535); // Full speed
+            Joint3ServoSpeed.Value = servo.GetVelocity(JOINT3_SERVO);
 
             // servo3 = Join4 (Wrist)
             servo.SetDegree(JOINT4_SERVO, -6700, 6700);
@@ -71,6 +74,7 @@ namespace RoboticArm
             servo.SetPeriod(JOINT4_SERVO, 19500);
             servo.SetAcceleration(JOINT4_SERVO, 65535); // Full Accel
             servo.SetVelocity(JOINT4_SERVO, 65535); // Full speed
+            Joint4ServoSpeed.Value = servo.GetVelocity(JOINT4_SERVO);
 
             // servo4 = Join5 (Wrist)
             servo.SetDegree(JOINT5_SERVO, -6700, 6700);
@@ -78,6 +82,7 @@ namespace RoboticArm
             servo.SetPeriod(JOINT5_SERVO, 19500);
             servo.SetAcceleration(JOINT5_SERVO, 65535); // Full Accel
             servo.SetVelocity(JOINT5_SERVO, 65535); // Full speed
+            Joint5ServoSpeed.Value = servo.GetVelocity(JOINT5_SERVO);
 
             // servo5 = Join6 (Wrist)
             servo.SetDegree(JOINT6_SERVO, -6700, 6700);
@@ -85,6 +90,7 @@ namespace RoboticArm
             servo.SetPeriod(JOINT6_SERVO, 19500);
             servo.SetAcceleration(JOINT6_SERVO, 65535); // Full Accel
             servo.SetVelocity(JOINT6_SERVO, 65535); // Full speed
+            Joint6ServoSpeed.Value = servo.GetVelocity(JOINT6_SERVO);
 
             SetPowerState(true);
         }
@@ -164,6 +170,36 @@ namespace RoboticArm
         private void HomeButton_Click(object sender, EventArgs e)
         {
             HomeAllAxis();
+        }
+
+        private void Joint1ServoSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetVelocity(JOINT1_SERVO, (int)Joint1ServoSpeed.Value);
+        }
+
+        private void Joint2ServoSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetVelocity(JOINT2_SERVO, (int)Joint2ServoSpeed.Value);
+        }
+
+        private void Joint3ServoSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetVelocity(JOINT3_SERVO, (int)Joint3ServoSpeed.Value);
+        }
+
+        private void Joint4ServoSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetVelocity(JOINT4_SERVO, (int)Joint4ServoSpeed.Value);
+        }
+
+        private void Joint5ServoSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetVelocity(JOINT5_SERVO, (int)Joint5ServoSpeed.Value);
+        }
+
+        private void Joint6ServoSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            servo.SetVelocity(JOINT6_SERVO, (int)Joint6ServoSpeed.Value);
         }
     }
 }
