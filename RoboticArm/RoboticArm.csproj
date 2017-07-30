@@ -56,6 +56,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hardware\RoboticArmWith6DOSim.cs" />
     <Compile Include="Hardware\TFRoboticArmWith6DOF.cs" />
     <Compile Include="Hardware\MotorConfiguration.cs" />
     <Compile Include="Hardware\IRoboticArmWith6DOF.cs" />

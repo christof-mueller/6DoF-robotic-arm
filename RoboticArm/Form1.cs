@@ -23,7 +23,6 @@ namespace RoboticArm
         public Form1()
         {
             InitializeComponent();
-            arm = new TFRoboticArmWith6DOF();
 
             positionOutputs = new Dictionary<byte, TextBox>();
             positionOutputs.Add(0, this.positionOutput_0);
@@ -48,14 +47,16 @@ namespace RoboticArm
             velocityInputs.Add(3, this.velocityInput_3);
             velocityInputs.Add(4, this.velocityInput_4);
             velocityInputs.Add(5, this.velocityInput_5);
-
-            RefreshOutputElements();
-
-            Log("Hardware init done!");
         }
 
         private void RefreshOutputElements()
         {
+            if (arm == null)
+            {
+                Log("Run init first!");
+                return;
+            }
+                
             // load the actual values for velocity
             foreach (byte motorID in velocityInputs.Keys)
             {
@@ -82,6 +83,11 @@ namespace RoboticArm
 
         private void PositionInput_ValueChanged(object sender, EventArgs e)
         {
+            if (arm == null)
+            {
+                Log("Run init first!");
+                return;
+            }
             TrackBar input = (TrackBar)sender;
             byte motorID = byte.Parse(input.Name.Replace("positionInput_", ""));
 
@@ -91,6 +97,11 @@ namespace RoboticArm
 
         private void VelocityInput_ValueChanged(object sender, EventArgs e)
         {
+            if (arm == null)
+            {
+                Log("Run init first!");
+                return;
+            }
             NumericUpDown input = (NumericUpDown)sender;
             byte motorID = byte.Parse(input.Name.Replace("velocityInput_", ""));
 
@@ -99,7 +110,37 @@ namespace RoboticArm
        
         private void HomeButton_Click(object sender, EventArgs e)
         {
+            if (arm == null)
+            {
+                Log("Run init first!");
+                return;
+            }
             arm.HomeAllAxis();
+        }
+
+        private void HardwareSimulationModeInput_CheckedChanged(object sender, EventArgs e)
+        {
+            InitRoboticArm();
+        }
+
+        private void InitRoboticArm()
+        {
+            // switch to simulation mode
+            if (HardwareSimulationModeInput.Checked)
+            {
+                arm = new RoboticArmWith6DOSim();
+            }
+            else
+            {
+                arm = new TFRoboticArmWith6DOF();
+            }
+            RefreshOutputElements();
+            Log("InitRoboticArm done!");
+        }
+
+        private void RunInitInput_Click(object sender, EventArgs e)
+        {
+            InitRoboticArm();
         }
     }
 }

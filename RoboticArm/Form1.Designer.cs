@@ -65,6 +65,8 @@
             this.joint1ServoSpeedLabel = new System.Windows.Forms.Label();
             this.logBox = new System.Windows.Forms.RichTextBox();
             this.clearButton = new System.Windows.Forms.Button();
+            this.HardwareSimulationModeInput = new System.Windows.Forms.CheckBox();
+            this.RunInitInput = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.positionInput_0)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.manualPage.SuspendLayout();
@@ -101,7 +103,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(641, 379);
+            this.tabControl1.Size = new System.Drawing.Size(637, 379);
             this.tabControl1.TabIndex = 2;
             // 
             // manualPage
@@ -127,7 +129,7 @@
             this.manualPage.Location = new System.Drawing.Point(4, 22);
             this.manualPage.Name = "manualPage";
             this.manualPage.Padding = new System.Windows.Forms.Padding(3);
-            this.manualPage.Size = new System.Drawing.Size(633, 353);
+            this.manualPage.Size = new System.Drawing.Size(629, 353);
             this.manualPage.TabIndex = 1;
             this.manualPage.Text = "Manual Mode";
             this.manualPage.UseVisualStyleBackColor = true;
@@ -289,7 +291,7 @@
             this.automaticPage.Controls.Add(this.homeButton);
             this.automaticPage.Location = new System.Drawing.Point(4, 22);
             this.automaticPage.Name = "automaticPage";
-            this.automaticPage.Size = new System.Drawing.Size(633, 353);
+            this.automaticPage.Size = new System.Drawing.Size(606, 353);
             this.automaticPage.TabIndex = 2;
             this.automaticPage.Text = "Automatic Mode";
             this.automaticPage.UseVisualStyleBackColor = true;
@@ -306,6 +308,7 @@
             // 
             // settingsPage
             // 
+            this.settingsPage.Controls.Add(this.HardwareSimulationModeInput);
             this.settingsPage.Controls.Add(this.velocityInput_5);
             this.settingsPage.Controls.Add(this.joint6ServoSpeedLabel);
             this.settingsPage.Controls.Add(this.velocityInput_4);
@@ -320,7 +323,7 @@
             this.settingsPage.Controls.Add(this.joint1ServoSpeedLabel);
             this.settingsPage.Location = new System.Drawing.Point(4, 22);
             this.settingsPage.Name = "settingsPage";
-            this.settingsPage.Size = new System.Drawing.Size(633, 353);
+            this.settingsPage.Size = new System.Drawing.Size(606, 353);
             this.settingsPage.TabIndex = 3;
             this.settingsPage.Text = "Settings";
             this.settingsPage.UseVisualStyleBackColor = true;
@@ -512,11 +515,34 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
+            // HardwareSimulationModeInput
+            // 
+            this.HardwareSimulationModeInput.AutoSize = true;
+            this.HardwareSimulationModeInput.Location = new System.Drawing.Point(17, 323);
+            this.HardwareSimulationModeInput.Name = "HardwareSimulationModeInput";
+            this.HardwareSimulationModeInput.Size = new System.Drawing.Size(115, 17);
+            this.HardwareSimulationModeInput.TabIndex = 15;
+            this.HardwareSimulationModeInput.Text = "Simulate Hardware";
+            this.HardwareSimulationModeInput.UseVisualStyleBackColor = true;
+            this.HardwareSimulationModeInput.CheckedChanged += new System.EventHandler(this.HardwareSimulationModeInput_CheckedChanged);
+            // 
+            // RunInitInput
+            // 
+            this.RunInitInput.Location = new System.Drawing.Point(651, 34);
+            this.RunInitInput.Name = "RunInitInput";
+            this.RunInitInput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RunInitInput.Size = new System.Drawing.Size(59, 31);
+            this.RunInitInput.TabIndex = 5;
+            this.RunInitInput.Text = "I N I T";
+            this.RunInitInput.UseVisualStyleBackColor = true;
+            this.RunInitInput.Click += new System.EventHandler(this.RunInitInput_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 504);
+            this.ClientSize = new System.Drawing.Size(723, 504);
+            this.Controls.Add(this.RunInitInput);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.logBox);
             this.Controls.Add(this.tabControl1);
@@ -582,6 +608,8 @@
         private System.Windows.Forms.Label joint3ServoSpeedLabel;
         private System.Windows.Forms.NumericUpDown velocityInput_1;
         private System.Windows.Forms.Label joint2ServoSpeedLabel;
+        private System.Windows.Forms.CheckBox HardwareSimulationModeInput;
+        private System.Windows.Forms.Button RunInitInput;
     }
 }
 
