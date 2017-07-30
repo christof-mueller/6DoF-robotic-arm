@@ -10,6 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{C2D122C8-8C9F-45AB-9D78-D63B5E8A5CD5}"
+	ProjectSection(SolutionItems) = preProject
+		screenshots\AutomaticMode.png = screenshots\AutomaticMode.png
+		screenshots\ManualMode.png = screenshots\ManualMode.png
+		screenshots\Settings.png = screenshots\Settings.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2D122C8-8C9F-45AB-9D78-D63B5E8A5CD5} = {E87091E2-CFC0-4D69-825F-EE00E10A44AB}
 	EndGlobalSection
 EndGlobal
