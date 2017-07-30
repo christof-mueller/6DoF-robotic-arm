@@ -51,6 +51,7 @@
             this.automaticPage = new System.Windows.Forms.TabPage();
             this.homeButton = new System.Windows.Forms.Button();
             this.settingsPage = new System.Windows.Forms.TabPage();
+            this.HardwareSimulationModeInput = new System.Windows.Forms.CheckBox();
             this.velocityInput_5 = new System.Windows.Forms.NumericUpDown();
             this.joint6ServoSpeedLabel = new System.Windows.Forms.Label();
             this.velocityInput_4 = new System.Windows.Forms.NumericUpDown();
@@ -65,7 +66,6 @@
             this.joint1ServoSpeedLabel = new System.Windows.Forms.Label();
             this.logBox = new System.Windows.Forms.RichTextBox();
             this.clearButton = new System.Windows.Forms.Button();
-            this.HardwareSimulationModeInput = new System.Windows.Forms.CheckBox();
             this.RunInitInput = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.positionInput_0)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -291,7 +291,7 @@
             this.automaticPage.Controls.Add(this.homeButton);
             this.automaticPage.Location = new System.Drawing.Point(4, 22);
             this.automaticPage.Name = "automaticPage";
-            this.automaticPage.Size = new System.Drawing.Size(606, 353);
+            this.automaticPage.Size = new System.Drawing.Size(629, 353);
             this.automaticPage.TabIndex = 2;
             this.automaticPage.Text = "Automatic Mode";
             this.automaticPage.UseVisualStyleBackColor = true;
@@ -323,10 +323,21 @@
             this.settingsPage.Controls.Add(this.joint1ServoSpeedLabel);
             this.settingsPage.Location = new System.Drawing.Point(4, 22);
             this.settingsPage.Name = "settingsPage";
-            this.settingsPage.Size = new System.Drawing.Size(606, 353);
+            this.settingsPage.Size = new System.Drawing.Size(629, 353);
             this.settingsPage.TabIndex = 3;
             this.settingsPage.Text = "Settings";
             this.settingsPage.UseVisualStyleBackColor = true;
+            // 
+            // HardwareSimulationModeInput
+            // 
+            this.HardwareSimulationModeInput.AutoSize = true;
+            this.HardwareSimulationModeInput.Location = new System.Drawing.Point(17, 323);
+            this.HardwareSimulationModeInput.Name = "HardwareSimulationModeInput";
+            this.HardwareSimulationModeInput.Size = new System.Drawing.Size(115, 17);
+            this.HardwareSimulationModeInput.TabIndex = 15;
+            this.HardwareSimulationModeInput.Text = "Simulate Hardware";
+            this.HardwareSimulationModeInput.UseVisualStyleBackColor = true;
+            this.HardwareSimulationModeInput.CheckedChanged += new System.EventHandler(this.HardwareSimulationModeInput_CheckedChanged);
             // 
             // velocityInput_5
             // 
@@ -515,17 +526,6 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // HardwareSimulationModeInput
-            // 
-            this.HardwareSimulationModeInput.AutoSize = true;
-            this.HardwareSimulationModeInput.Location = new System.Drawing.Point(17, 323);
-            this.HardwareSimulationModeInput.Name = "HardwareSimulationModeInput";
-            this.HardwareSimulationModeInput.Size = new System.Drawing.Size(115, 17);
-            this.HardwareSimulationModeInput.TabIndex = 15;
-            this.HardwareSimulationModeInput.Text = "Simulate Hardware";
-            this.HardwareSimulationModeInput.UseVisualStyleBackColor = true;
-            this.HardwareSimulationModeInput.CheckedChanged += new System.EventHandler(this.HardwareSimulationModeInput_CheckedChanged);
-            // 
             // RunInitInput
             // 
             this.RunInitInput.Location = new System.Drawing.Point(651, 34);
@@ -547,7 +547,7 @@
             this.Controls.Add(this.logBox);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "RobiticArm";
+            this.Text = "RoboticArm";
             ((System.ComponentModel.ISupportInitialize)(this.positionInput_0)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.manualPage.ResumeLayout(false);
