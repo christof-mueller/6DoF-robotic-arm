@@ -94,7 +94,7 @@ namespace RoboticArm.Hardware
             }
             else
             {
-                throw new Exception("Unkown motorID in SetMotorConfiguration: " + motorID);
+                throw new Exception("Unkown motorID in SetPosition: " + motorID);
             }
         }
 
@@ -106,7 +106,7 @@ namespace RoboticArm.Hardware
             }
             else
             {
-                throw new Exception("Unkown motorID in SetMotorConfiguration: " + motorID);
+                throw new Exception("Unkown motorID in GetPosition: " + motorID);
             }
         }
 
@@ -118,7 +118,7 @@ namespace RoboticArm.Hardware
             }
             else
             {
-                throw new Exception("Unkown motorID in SetMotorConfiguration: " + motorID);
+                throw new Exception("Unkown motorID in SetVelocity: " + motorID);
             }
         }
 
@@ -130,7 +130,7 @@ namespace RoboticArm.Hardware
             }
             else
             {
-                throw new Exception("Unkown motorID in SetMotorConfiguration: " + motorID);
+                throw new Exception("Unkown motorID in GetVelocity: " + motorID);
             }
         }
 
